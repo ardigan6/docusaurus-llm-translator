@@ -55,7 +55,8 @@ jobs:
 
     - name: Run translation
       env:
-        LLM_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        API_KEY: ${{ secrets.API_KEY }}
+        API_ENDPOINT_URL: 'https://whatever/chat/completions'
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: python translate.py
 
