@@ -8,8 +8,10 @@ requirements:
 
 Local use:
 
-      python bin/translate.py  --source-docs-dir ./docs --i18n-root ./i18n --cache-file tr_cache.json --languages fr --docs-plugin-path "docusaurus-plugin-content-docs/current" file.mdx
-
+      python bin/translate.py  --source-docs-dir ./docs \
+        --i18n-root ./i18n --cache-file tr_cache.json \
+        --languages fr --docs-plugin-path "docusaurus-plugin-content-docs/current" \
+        file.mdx file2.mdx
 
 Or use with a Github Action, similar to:
 
