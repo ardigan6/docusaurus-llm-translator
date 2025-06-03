@@ -74,9 +74,8 @@ jobs:
         id: trans-cache
         with:
           path: ${{ env.CACHE_FILE_PATH }}
-          key: ${{ runner.os }}-translation-cache-${{ github.head_ref || github.ref_name }}-${{ hashFiles('docs/**/*.mdx') }}
+          key: ${{ runner.os }}-translation-cache-${{ hashFiles(env.CACHE_FILE_PATH) }}
           restore-keys: |
-            ${{ runner.os }}-translation-cache-${{ github.head_ref || github.ref_name }}-
             ${{ runner.os }}-translation-cache-
 
       - name: Get Changed MDX Files
